@@ -111,9 +111,7 @@ exports.checkEpisodeAccess = async (req, res) => {
       });
     }
 
-    const isFree =
-      episode.is_paid === false ||
-      episode.is_locked === false;
+    const isFree = episode.is_paid !== true;
 
     const unlocked = await EpisodeUnlock.findOne({
       user_id: userId,

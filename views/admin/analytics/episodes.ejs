@@ -7,9 +7,9 @@
       </div>
     </div>
 
-    <span class="badge bg-primary">
-      <%= episodeAnalytics.length %> Episodes
-    </span>
+    <span class="badge bg-blue-lt text-blue">
+  <%= episodeAnalytics.length %> Episodes
+</span>
   </div>
 
   <% if (!episodeAnalytics || episodeAnalytics.length === 0) { %>
@@ -55,17 +55,21 @@
               </td>
 
               <td>
-                <span class="badge bg-primary">
-                  <%= item.reads || 0 %>
-                </span>
+               <span class="badge bg-blue-lt text-blue">
+  <%= item.reads || 0 %>
+</span>
               </td>
 
               <td>
-                <% if (item.episode?.is_paid) { %>
-                  <span class="badge bg-primary-lt">Paid</span>
-                <% } else { %>
-                  <span class="badge bg-blue-lt">Free</span>
-                <% } %>
+              <% if (item.episode?.is_paid) { %>
+  <span class="badge bg-orange-lt text-orange">
+    <i class="bi bi-lock-fill me-1"></i>Paid
+  </span>
+<% } else { %>
+  <span class="badge bg-green-lt text-green">
+    <i class="bi bi-unlock-fill me-1"></i>Free
+  </span>
+<% } %>
               </td>
 
               <td class="text-end">

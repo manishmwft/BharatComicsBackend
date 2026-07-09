@@ -7,9 +7,9 @@
       </div>
     </div>
 
-    <span class="badge bg-primary">
-      <%= genreAnalytics.length %> Genres
-    </span>
+    <span class="badge bg-blue-lt text-blue">
+  <%= genreAnalytics.length %> Genres
+</span>
   </div>
 
   <% if (!genreAnalytics || genreAnalytics.length === 0) { %>
@@ -54,8 +54,7 @@
               </td>
 
               <td>
-                <span class="badge bg-primary">
-                  <%= item.reads || 0 %>
+<span class="badge bg-blue-lt">                  <%= item.reads || 0 %>
                 </span>
               </td>
 

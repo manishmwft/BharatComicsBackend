@@ -12,7 +12,8 @@
       </div>
     </div>
 
-    <span class="badge bg-primary">
+    <span class="badge bg-blue-lt text-blue">
+
       <%= activityLogs.length %> Logs
     </span>
 
@@ -64,25 +65,23 @@
               <%= log.user_id || '-' %>
             </td>
 
-            <td>
+        <td>
 
-              <% if(
-                    log.activity_type === 'read'
-                  ){ %>
+  <% if (log.activity_type === 'read') { %>
 
-                <span class="badge bg-primary">
-                  Read
-                </span>
+    <span class="badge bg-green-lt text-green">
+      Read
+    </span>
 
-              <% } else { %>
+  <% } else { %>
 
-                <span class="badge bg-blue-lt">
-                  View
-                </span>
+    <span class="badge bg-cyan-lt text-cyan">
+      View
+    </span>
 
-              <% } %>
+  <% } %>
 
-            </td>
+</td>
 
             <td>
               <%= log.comic?.title || '-' %>
